@@ -1,6 +1,6 @@
 version: "1.0"
 services:
-  ssh-gost:
+  ubuntu:
     image: "${IMAGE_PATH}"
     container_name: ubuntu
     environment:
