@@ -1,0 +1,19 @@
+version: "1.0"
+services:
+  ssh-gost:
+    image: "${IMAGE_PATH}"
+    container_name: ubuntu
+    environment:
+      - ROOT_PASSWORD=${ROOT_PASSWORD}
+      - VSC_PASSWORD=${VSC_PASSWORD}
+      - VSC_ENABLE=${VSC_ENABLE}
+    volumes:
+      - extdisk:/mydata
+    ports:
+      - 80:80
+    restart: unless-stopped
+volumes:
+  extdisk:
+    driver_opts:
+      class: standard
+      size: 5Gi
