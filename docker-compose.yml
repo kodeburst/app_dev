@@ -14,12 +14,10 @@ services:
     restart: unless-stopped
   ubuntu2:
     image: "${IMAGE_PATH}"
-    container_name: ubuntu
+    container_name: ubuntu2
     environment:
       - ROOT_PASSWORD=${ROOT_PASSWORD}
       - VSC_PASSWORD=${VSC_PASSWORD}
-    volumes:
-      - extdisk:/mydata
     restart: unless-stopped
 volumes:
   extdisk:
