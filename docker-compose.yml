@@ -24,6 +24,9 @@ services:
     container_name: postgresql
     environment:
       - POSTGRES_PASSWORD=p9Db7W7C68ccf4
+      - PGDATA=/mydata/pgdata
+    volumes:
+      - extdisk:/mydata
     restart: unless-stopped
 volumes:
   extdisk:
