@@ -19,7 +19,7 @@ services:
       - ROOT_PASSWORD=${ROOT_PASSWORD}
       - VSC_PASSWORD=${VSC_PASSWORD}
     volumes:
-      - extdisk:/mydata
+      - extdisk/ubuntu2:/mydata
     restart: unless-stopped
 volumes:
   extdisk:
