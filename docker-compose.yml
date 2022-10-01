@@ -19,6 +19,10 @@ services:
       - ROOT_PASSWORD=${ROOT_PASSWORD}
       - VSC_PASSWORD=${VSC_PASSWORD}
     restart: unless-stopped
+  nginx:
+    image: "nginx"
+    container_name: nginx
+    restart: unless-stopped
 volumes:
   extdisk:
     driver_opts:
