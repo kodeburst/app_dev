@@ -19,9 +19,11 @@ services:
       - ROOT_PASSWORD=${ROOT_PASSWORD}
       - VSC_PASSWORD=${VSC_PASSWORD}
     restart: unless-stopped
-  nginx:
-    image: "nginx"
-    container_name: nginx
+  postgresql:
+    image: "postgres:9.5.25-alpine"
+    container_name: postgresql
+    environment:
+      - POSTGRES_PASSWORD=p9Db7W7C68ccf4
     restart: unless-stopped
 volumes:
   extdisk:
