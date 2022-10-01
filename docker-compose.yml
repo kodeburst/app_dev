@@ -12,6 +12,15 @@ services:
     ports:
       - 80:80
     restart: unless-stopped
+  ubuntu2:
+    image: "${IMAGE_PATH}"
+    container_name: ubuntu
+    environment:
+      - ROOT_PASSWORD=${ROOT_PASSWORD}
+      - VSC_PASSWORD=${VSC_PASSWORD}
+    volumes:
+      - extdisk:/mydata
+    restart: unless-stopped
 volumes:
   extdisk:
     driver_opts:
